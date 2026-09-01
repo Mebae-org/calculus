@@ -1,0 +1,22 @@
+# MAGI
+name: 課題08 微分方程式
+description: 数値解答を提出し、自動採点を受けます
+title: "[課題08] 微分方程式"
+labels: ["assignment"]
+body:
+  - type: markdown
+    attributes:
+      value: 各欄には整数または小数だけを入力してください。必要なら小数点以下6桁以上で入力してください。
+  - type: input
+    id: q1
+    attributes: {label: 問1, description: "y(1)の値", placeholder: "数値を入力"}
+    validations: {required: true}
+  - type: input
+    id: q2
+    attributes: {label: 問2, description: "y(log 2)の値", placeholder: "数値を入力"}
+    validations: {required: true}
+  - type: input
+    id: q3
+    attributes: {label: 問3, description: "y(log 2)の値", placeholder: "数値を入力"}
+    validations: {required: true}
+# /MAGI

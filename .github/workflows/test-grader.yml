@@ -1,0 +1,30 @@
+# MAGI
+name: 自動採点処理のテスト
+
+on:
+  push:
+    paths:
+      - ".github/scripts/**"
+      - ".github/workflows/**"
+      - ".github/ISSUE_TEMPLATE/assignment-*.yml"
+      - "ch*/assignments/**"
+  pull_request:
+    paths:
+      - ".github/scripts/**"
+      - ".github/workflows/**"
+      - ".github/ISSUE_TEMPLATE/assignment-*.yml"
+      - "ch*/assignments/**"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 教材を取得
+        uses: actions/checkout@v4
+
+      - name: 採点処理をテスト
+        run: node --test .github/scripts/grade-assignment.test.cjs
+# /MAGI

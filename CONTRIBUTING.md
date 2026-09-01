@@ -15,7 +15,7 @@ chNN-short-name/
 ├── exercises/
 │   └── index.md       練習問題と解答
 └── assignments/
-    └── index.md       提出課題
+    └── index.md       数値解答式の提出課題
 ```
 
 ## 本文の役割分担
@@ -56,6 +56,14 @@ chNN-short-name/
 - 記述式では `**選択: ...**` の行を省略します。
 - `**答: ...**` より後ろは解説として扱われます。
 - コロンは半角の `:`、選択肢の区切りは半角スペースを含む ` / ` を使います。
+
+## 提出課題と自動採点
+
+- 各章の提出課題は3問、各10点の数値解答式とします。
+- 解答が一意な整数または実数になる問題を用い、必要な丸め桁を問題文に明記します。
+- Issueフォームは `.github/ISSUE_TEMPLATE/assignment-chNN.yml` に置き、入力欄の見出しを `問1`、`問2`、`問3` とします。
+- 正答と許容誤差は `.github/scripts/grade-assignment.cjs` で管理します。問題を変更するときは、正答とテストも同時に変更します。
+- 採点処理を変更した場合は `node --test .github/scripts/grade-assignment.test.cjs` を実行します。
 
 ## Pull Request の手順
 

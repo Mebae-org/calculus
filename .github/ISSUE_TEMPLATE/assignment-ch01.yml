@@ -1,34 +1,32 @@
 # MAGI
-name: 課題01 [CHAPTER TITLE] の提出
-description: 第1章「[CHAPTER TITLE]」の課題を提出します
-title: "[課題01] [CHAPTER TITLE]"
-labels: ["assignment", "ch01"]
+name: 課題01 極限と導関数
+description: 数値解答を提出し、自動採点を受けます
+title: "[課題01] 極限と導関数"
+labels: ["assignment"]
 body:
   - type: markdown
     attributes:
       value: |
-        各問について、答えだけでなく、考え方が分かる途中式または説明を記述してください。
-  - type: textarea
+        各欄には整数または小数だけを入力してください。Issueの作成・編集後にGitHub Actionsが自動採点します。
+  - type: input
     id: q1
     attributes:
       label: 問1
-      description: "[QUESTION 1]"
-      placeholder: 答えと途中式または説明を入力
-    validations:
-      required: true
-  - type: textarea
+      description: 極限の値
+      placeholder: "数値を入力"
+    validations: {required: true}
+  - type: input
     id: q2
     attributes:
       label: 問2
-      description: "[QUESTION 2]"
-      placeholder: 答えと途中式または説明を入力
-    validations:
-      required: true
-  - type: checkboxes
-    id: consent
+      description: f'(2)の値
+      placeholder: "数値を入力"
+    validations: {required: true}
+  - type: input
+    id: q3
     attributes:
-      label: 公開回答への同意
-      options:
-        - label: 回答が公開されることを理解し、公開に同意します
-          required: true
+      label: 問3
+      description: t=2における瞬間速度
+      placeholder: "数値を入力"
+    validations: {required: true}
 # /MAGI
